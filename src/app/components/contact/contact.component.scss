@@ -1,0 +1,74 @@
+@import '../../global-styles/variables';
+@import '../../global-styles/link-styles';
+@import '../../mixins/selection-txt-selector.scss';
+
+@include selection {
+  color: $themeBlue1;
+  background-color: #ffffff;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+}
+
+a {
+  font-size: 16px;
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: $themeGray1;
+}
+
+a:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+  transition: border-bottom 0.8s;
+}
+
+a:hover:after {
+  border-bottom: 1px solid $themeGray1;
+}
+
+.card {
+  background-color: $themeBlue1;
+  text-align: center;
+  height: 200px;
+  padding: 40px 10px;
+}
+
+.row {
+  margin-right: 0;
+}
+
+.row > div {
+  margin-top: 20px;
+  padding: 0 30px;
+}
+
+@media screen and (max-width: 580px) {
+  .row {
+
+    div {
+      max-width: 300px;
+      margin: 10px auto 10px auto;
+    }
+  }
+}
+
+@media screen and (min-width: 580px) and (max-width: 1080px) {
+  .row {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  .row {
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+}

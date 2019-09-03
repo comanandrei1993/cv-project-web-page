@@ -1,0 +1,53 @@
+@import '../../global-styles/variables';
+@import '../../global-styles/link-styles';
+
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+
+  a {
+    transition: color 0.5s;
+    height: 20px;
+    margin-top: -20px;
+  }
+
+  a:hover {
+    color: $themeGray1;
+  }
+
+  a:after {
+    content: "";
+    display: block;
+    width: 0%;
+    margin: 0 auto;
+    border-bottom: 2px none transparent;
+    transition: width 0.5s, color 0.5s, border-bottom 0.8s;
+  }
+
+  a:hover:after {
+    width: 100%;
+    color: $themeGray1;
+    border-bottom: 1.5px solid $themeGray1;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  nav {
+    a, ul {
+      margin: 0 auto;
+    }
+
+  }
+}
+
+@media screen and (max-width: 420px) {
+  nav, ul {
+    flex-direction: column;
+
+    li {
+      margin-top: 5px;
+    }
+
+  }
+}

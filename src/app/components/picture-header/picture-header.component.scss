@@ -1,0 +1,36 @@
+@import '../../global-styles/variables';
+@import '../../mixins/img-grayscale-mixin.scss';
+
+div.row {
+  margin: 0;
+  padding: 10px 0px;
+}
+
+img {
+  max-width: 15%;
+  margin: 0 auto;
+  border-radius: 100%;
+  border: 5px solid transparent;
+  @include filter(grayscale(60%));
+  transition:
+      border 0.5s,
+      filter 0.8s
+      ;
+}
+
+img:hover {
+  border: 0px solid transparent;
+  @include filter(grayscale(20%));
+}
+
+@media screen and (max-width: 750px) and (min-width: 481px) {
+  img {
+    max-width: 30%;
+  }
+}
+
+@media screen  and (max-width: 480px ) {
+  img {
+    max-width: 40%;
+  }
+}

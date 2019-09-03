@@ -1,0 +1,58 @@
+@import '../../global-styles/variables';
+
+button {
+  margin-bottom: 20px;
+}
+
+small {
+  color: $warningRed;
+}
+
+span {
+  color: $warningRed;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}
+
+.container {
+  margin-top: 25px;
+  max-width: 60%;
+}
+
+// Form validation styles
+
+.ng-valid[required] {
+  border-left: 5px solid $validGreen;
+}
+
+.ng-invalid:not(form).ng-touched {
+  border-left: 5px solid $warningRed;
+}
+
+// Thank you message styles
+
+.hidden {
+  margin: 100px auto;
+  font-size: 24px;
+  text-align: center;
+  color: $validGreen;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1080px) {
+
+  .container {
+    max-width: 50%;
+  }
+
+}
+
+@media screen and (min-width: 1081px) {
+
+  .container {
+    max-width: 40%;
+  }
+
+}

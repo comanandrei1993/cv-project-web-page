@@ -1,0 +1,7 @@
+@mixin selection {
+  ::-moz-selection { @content; }
+  ::-webkit-selection { @content; }
+  ::-ms-selection { @content; }
+  ::-o-selection { @content; }
+  ::selection { @content }
+}

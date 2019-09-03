@@ -1,0 +1,38 @@
+@import '../../global-styles/variables';
+@import '../../global-styles/link-styles';
+
+a {
+  color: $themeBlue1;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+.my-paragraph {
+  color: #ffffff;
+}
+
+.row {
+  margin: 25px auto;
+
+  p {
+    margin-bottom: 20px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+  .row {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+}
+
+@media screen and (min-width: 1081px) {
+  .row {
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+
+}

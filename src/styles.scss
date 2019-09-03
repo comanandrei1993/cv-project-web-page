@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+@import './app/global-styles/variables';
+
+h1, h1, h3, h4, h5, h6, p,
+div, nav, a, form, label, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $themeGray3;
+  color: #ffffff;
+}
