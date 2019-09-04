@@ -1,5 +1,5 @@
 <div class="container" *ngIf="submited === false">
-  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+  <form (ngSubmit)="onSubmit(myForm.value)" #myForm="ngForm">
     <div class="form-group">
       <label for="full-name">Full Name</label>
       <input

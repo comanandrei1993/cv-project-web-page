@@ -1,1 +1,22 @@
-<p>messages-received works!</p>
+<div class="row" *ngIf="messages.length > 0 && !gettingMessages">
+  <div class="col-sm-12" *ngFor="let message of messages">
+    <h2>{{message.fullName}}</h2>
+    <h3>{{message.email}}</h3>
+    <hr />
+    <h4>{{message.subject}}</h4>
+    <p>{{message.text}}</p>
+    <button (click)="onDeleteMessage(message.id)">X</button>
+  </div>
+</div>
+
+<div class="row" *ngIf="messages.length < 1 &&!gettingMessages">
+    <p class="no-messages">
+      You have no messages.
+    </p>
+  </div>
+
+<div class="row" *ngIf="gettingMessages">
+  <p class="no-messages">
+    Loading your messages.
+  </p>
+</div>

@@ -1,6 +1,7 @@
 export class SubmitedData {
-  fullname: string;
+  fullName: string;
   subject: string;
   email: string;
   text: string;
+  id?: string;
 }
