@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
 
 import { SubmitedData } from 'src/app/models/submitedData';
+import { GetMessagesService } from 'src/app/services/get-messages.service';
+import { DeleteMessageService } from 'src/app/services/delete-message.service';
 
 @Component({
   selector: 'app-messages-received',
@@ -13,7 +14,11 @@ export class MessagesReceivedComponent implements OnInit {
   messages: SubmitedData[] = [];
   gettingMessages = false;
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private getMessagesService: GetMessagesService,
+    private deleteMessageService: DeleteMessageService,
+    ) { }
 
   ngOnInit() {
     this.getMessages();
@@ -21,28 +26,15 @@ export class MessagesReceivedComponent implements OnInit {
 
   getMessages() {
     this.gettingMessages = true;
-    this.http.get<{ [key: string]: SubmitedData }>(
-      'https://my-cv-page.firebaseio.com/messages.json'
-    ).pipe(map(response => {
-      const arrayOfMessages = [];
-      for (const key in response) {
-        if (response.hasOwnProperty(key)) {
-          arrayOfMessages.push({...response[key], id: key});
-        }
-      }
-      return arrayOfMessages;
-    }
-    ))
-    .subscribe(messages => {
+    this.getMessagesService.getMessages().subscribe(messages => {
       this.gettingMessages = false;
       this.messages = messages;
-      console.log(this.messages);
     });
   }
 
-  onDeleteMessage(id) {
+  onDeleteMessage(id: string) {
 
-
+    this.deleteMessageService.deleteMessage(id);
 
   }
 

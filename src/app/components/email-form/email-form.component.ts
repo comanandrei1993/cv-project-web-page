@@ -3,6 +3,8 @@ import { NgForm } from '@angular/forms';
 
 import { HttpClient } from '@angular/common/http';
 
+import { PostMessageService } from 'src/app/services/post-message.service';
+
 @Component({
   selector: 'app-email-form',
   templateUrl: './email-form.component.html',
@@ -17,7 +19,7 @@ export class EmailFormComponent implements OnInit {
 
   submited = false;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private postMessageService: PostMessageService) { }
 
   ngOnInit() {
   }
@@ -31,12 +33,14 @@ export class EmailFormComponent implements OnInit {
     // console.log(this.submitedData);
 
     this.submited = true;
-    this.http.post<{ name: string }>(
-      'https://my-cv-page.firebaseio.com/messages.json',
-      myForm
-    ).subscribe(response => {
-      console.log(response);
-    });
+
+    this.postMessageService.postMessage(
+      myForm.fullName,
+      myForm.subject,
+      myForm.email,
+      myForm.text
+      );
+
     this.myForm.reset();
   }
 
