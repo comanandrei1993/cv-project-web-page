@@ -4,6 +4,14 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+// AngularFire imports
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+
+import { environment } from '../environments/environment';
+
 // Routing Module
 import { AppRoutingModule } from './app-routing.module';
 
@@ -33,6 +41,11 @@ import { MessagesReceivedComponent } from './private/messages-received/messages-
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    // AngularFire
+    AngularFireModule.initializeApp(environment.firebase, 'my-cv-page'),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

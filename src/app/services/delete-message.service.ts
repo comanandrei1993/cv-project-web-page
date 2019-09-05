@@ -11,7 +11,7 @@ export class DeleteMessageService {
   deleteMessage(id: string) {
     console.log(id);
     return this.http.delete(
-      `http://crossorigin.me/https://console.firebase.google.com/project/my-cv-page/database/my-cv-page/data/messages/${id}.json`
+      `https://my-cv-page.firebaseio.com/messages/${id}.json`
       )
       .subscribe();
   }
