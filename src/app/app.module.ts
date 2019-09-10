@@ -24,6 +24,7 @@ import { PictureHeaderComponent } from './components/picture-header/picture-head
 import { EmailFormComponent } from './components/email-form/email-form.component';
 import { MySkillsComponent } from './components/my-skills/my-skills.component';
 import { MessagesReceivedComponent } from './private/messages-received/messages-received.component';
+import { AdminComponent } from './private/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MessagesReceivedComponent } from './private/messages-received/messages-
     PictureHeaderComponent,
     EmailFormComponent,
     MySkillsComponent,
-    MessagesReceivedComponent
+    MessagesReceivedComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

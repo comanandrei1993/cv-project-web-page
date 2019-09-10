@@ -1,0 +1,25 @@
+<div class="container">
+  <form (ngSubmit)="logMeIn(formData.value)" #formData="ngForm">
+    <div class="form-group">
+      <label for="email">Username/Email:</label>
+      <input
+        type="email"
+        class="form-control"
+        ngModel
+        name="email"
+        #email="ngModel">
+  </div>
+
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        class="form-control"
+        ngModel
+        name="password"
+        #password="ngModel">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Log In</button>
+  </form>
+</div>
