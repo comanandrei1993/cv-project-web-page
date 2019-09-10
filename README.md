@@ -10,7 +10,10 @@ In order to get it working:
 
     3. In your IDE open the "angular.json" file.
 
-    4. On line 30, in the "styles" array, add "./node_modules/bootstrap/dist/css/bootstrap.min.css" WITH the quotes!
+    4. On line 30, in the "styles" array, check for "./node_modules/bootstrap/dist/css/bootstrap.min.css" If it's not there
+     then add it WITH the quotes!
+    
+    4. Use "npm install @angular/fire firebase --save"
 
     5. Use "ng serve" in the console to start a local server.
 
