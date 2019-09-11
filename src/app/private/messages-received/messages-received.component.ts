@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 import { SubmitedData } from 'src/app/models/submitedData';
 import { GetMessagesService } from 'src/app/services/get-messages.service';
@@ -15,7 +14,6 @@ export class MessagesReceivedComponent implements OnInit {
   gettingMessages = false;
 
   constructor(
-    private http: HttpClient,
     private getMessagesService: GetMessagesService,
     private deleteMessageService: DeleteMessageService,
     ) { }

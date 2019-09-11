@@ -1,3 +1,7 @@
+<div class="container" *ngIf="invalidUserData === true">
+  <p>Invalid User!</p>
+</div>
+
 <div class="container">
   <form (ngSubmit)="logMeIn(logInForm.value)" #logInForm="ngForm">
     <div class="form-group">
@@ -9,7 +13,6 @@
         name="email"
         #email="ngModel"
         required>
-      <p *ngIf="email.invalid">Username/Email is invalid.</p>
   </div>
 
     <div class="form-group">
@@ -21,7 +24,6 @@
         name="password"
         #password="ngModel"
         required>
-      <p *ngIf="password.invalid">Please enter a password.</p>
   </div>
 
   <button type="submit" class="btn btn-primary">Log In</button>
