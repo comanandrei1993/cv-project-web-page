@@ -1,5 +1,5 @@
 <div class="container">
-  <form (ngSubmit)="logMeIn(formData.value)" #formData="ngForm">
+  <form (ngSubmit)="logMeIn(logInForm.value)" #logInForm="ngForm">
     <div class="form-group">
       <label for="email">Username/Email:</label>
       <input
@@ -7,7 +7,9 @@
         class="form-control"
         ngModel
         name="email"
-        #email="ngModel">
+        #email="ngModel"
+        required>
+      <p *ngIf="email.invalid">Username/Email is invalid.</p>
   </div>
 
     <div class="form-group">
@@ -17,7 +19,9 @@
         class="form-control"
         ngModel
         name="password"
-        #password="ngModel">
+        #password="ngModel"
+        required>
+      <p *ngIf="password.invalid">Please enter a password.</p>
   </div>
 
   <button type="submit" class="btn btn-primary">Log In</button>
