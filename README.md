@@ -15,3 +15,7 @@ In order to get it working:
     5. Use "ng serve" in the console to start a local server.
 
     6. Open up a web browser and navigate to localhost:4200
+
+    7. The /admin route can be accessed by double clicking on the image in the header.
+
+    8. To access the /messages route you can log in with the "email@mail.int" username and the "password" password.
