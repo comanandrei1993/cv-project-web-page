@@ -9,7 +9,6 @@ import { MessagesReceivedComponent } from './private/messages-received/messages-
 import { MySkillsComponent } from './components/my-skills/my-skills.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/about-me', pathMatch: 'full' },
   { path: 'admin', component: AdminComponent },
   { path: 'about-me', component: AboutMeComponent },
   { path: 'contact', component: ContactComponent },
