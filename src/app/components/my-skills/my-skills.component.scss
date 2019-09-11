@@ -1,5 +1,12 @@
 @import '../../global-styles/variables';
 
+figcaption {
+  color: #000000;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: -15px;
+}
+
 img {
   max-height: 100%;
   max-width: 100%;
