@@ -32,8 +32,11 @@ export class MessagesReceivedComponent implements OnInit {
 
   onDeleteMessage(id: string) {
 
-    this.deleteMessageService.deleteMessage(id);
-
+    this.deleteMessageService.deleteMessage(id).subscribe(
+      res => {
+        this.getMessages();
+      }
+    );
   }
 
 }
