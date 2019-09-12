@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { HttpClient } from '@angular/common/http';
-
 import { PostMessageService } from 'src/app/services/post-message.service';
 
 @Component({
@@ -13,25 +11,14 @@ import { PostMessageService } from 'src/app/services/post-message.service';
 export class EmailFormComponent implements OnInit {
   @ViewChild('myForm', { static: false }) myForm: NgForm;
 
-  // submitedData: SubmitedData;
-
-
-
   submited = false;
 
-  constructor(private http: HttpClient, private postMessageService: PostMessageService) { }
+  constructor(private postMessageService: PostMessageService) { }
 
   ngOnInit() {
   }
 
   onSubmit(myForm) {
-    console.log(this.myForm);
-
-    console.log(myForm);
-
-    // this.submitedData = myForm;
-    // console.log(this.submitedData);
-
     this.submited = true;
 
     this.postMessageService.postMessage(

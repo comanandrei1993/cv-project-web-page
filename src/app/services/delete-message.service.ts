@@ -12,7 +12,6 @@ export class DeleteMessageService {
     console.log(id);
     return this.http.delete(
       `https://my-cv-page.firebaseio.com/messages/${id}.json`
-      )
-      .subscribe();
+    );
   }
 }
