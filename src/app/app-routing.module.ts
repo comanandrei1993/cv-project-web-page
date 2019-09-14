@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'email-form', component: EmailFormComponent },
   { path: 'my-skills', component: MySkillsComponent },
   { path: 'messages', component: MessagesReceivedComponent },
-  { path: '**', redirectTo: '/about-me' }
+  { path: '**', redirectTo: 'about-me' }
 ];
 
 @NgModule({
