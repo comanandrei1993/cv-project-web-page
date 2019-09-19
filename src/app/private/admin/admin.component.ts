@@ -24,13 +24,9 @@ export class AdminComponent implements OnInit {
     this.authService.logMeIn(formData)
     .subscribe(
       response => {
-        console.log('From admin.component.ts: ');
-        console.log(response);
         this.router.navigate(['/messages']);
       },
       error => {
-        console.log('From admin.component.ts: ');
-        console.log(error);
         this.invalidUserData = true;
       }
     );

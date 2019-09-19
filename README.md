@@ -8,9 +8,9 @@ In order to get it working:
 
     2. Use "npm install --save bootstrap".
 
-    3. In your IDE open the "angular.json" file.
+    3. "npm install --save firebase @angular/fire"
 
-    4. On line 30, in the "styles" array, add "./node_modules/bootstrap/dist/css/bootstrap.min.css" WITH the quotes!
+    4. "npm install --save font-awesome angular-font-awesome"
 
     5. Use "ng serve" in the console to start a local server.
 
