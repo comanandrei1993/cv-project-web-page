@@ -7,6 +7,28 @@
   background-color: #ffffff;
 }
 
+// Stick footer to bottom of page
+
+.row {
+  padding-bottom: 50px;
+}
+
+.social {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+///////////////////////////////////
+
+// Map styles
+
+agm-map {
+  height: 300px;
+}
+
+//////////////////////////////////
+
 a, a:visited, a:hover {
   text-decoration: none;
 }
@@ -20,24 +42,43 @@ a:hover {
   color: $themeGray1;
 }
 
-a:after {
-  content: "";
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  border-bottom: 1px solid #ffffff;
-  transition: border-bottom 0.8s;
-}
-
-a:hover:after {
-  border-bottom: 1px solid $themeGray1;
-}
-
 .card {
   background-color: $themeBlue1;
   text-align: center;
   height: 200px;
   padding: 40px 10px;
+  min-width: 125px;
+}
+
+.email {
+
+  a:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    border-bottom: 1px solid #ffffff;
+    transition: border-bottom 0.8s;
+  }
+
+  a:hover:after {
+    border-bottom: 1px solid $themeGray1;
+  }
+}
+
+.social {
+  max-width: 100%;
+  background-color: $themeBlue1;
+
+  a {
+    font-size: 24px;
+  }
+
+  .my-footer {
+  display: flex;
+  justify-content: center;
+}
+
 }
 
 .row {
@@ -54,7 +95,7 @@ a:hover:after {
 
     div {
       max-width: 300px;
-      margin: 10px auto 10px auto;
+      margin: 10px auto;
     }
   }
 }

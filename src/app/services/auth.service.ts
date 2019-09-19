@@ -24,12 +24,11 @@ export class AuthService {
     ) { }
 
   logMeIn(formData) {
-    console.log('\nfrom auth.service:');
-    console.log(formData);
-
     const authObs: Observable<AuthResponseData> = this.http
     .post<AuthResponseData>(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCzE7tLVPuw9XWreoA39dViHQoJeJ-olb4',
+      'https://identitytoolkit.googleapis.com/v1/accounts' +
+       ':signInWithPassword?key=' +
+       'AIzaSyCzE7tLVPuw9XWreoA39dViHQoJeJ-olb4',
       {
         email: formData.email,
         password: formData.password,

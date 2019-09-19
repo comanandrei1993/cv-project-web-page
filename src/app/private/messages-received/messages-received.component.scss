@@ -15,8 +15,17 @@ button:hover {
   color: #000000;
 }
 
+h3 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 22px
+}
+
 h4 {
   margin-bottom: 5px;
+  font-size: 18px;
 }
 
 hr {
@@ -25,15 +34,17 @@ hr {
 }
 
 .row {
+  max-width: 100%;
   padding: 20px 20%;
 }
 
-.row > div.col-sm-12 {
+div.col-sm-12 {
   border: 1px solid $themeBlue1;
   border-radius: 20px;
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 20px;
+  word-wrap: break-word;
 }
 
 .row > .no-messages {

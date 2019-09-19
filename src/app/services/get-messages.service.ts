@@ -23,6 +23,7 @@ export class GetMessagesService {
         params: new HttpParams().set('auth', this.authService.token)
       }
     ).pipe(map(response => {
+      console.log(response);
       const arrayOfMessages = [];
       for (const key in response) {
         if (response.hasOwnProperty(key)) {
