@@ -4,12 +4,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 In order to get it working: 
 
-    1. Navigate to the folder from a console, use "npm install".
+    1. Navigate to the folder where you cloned it from a console, use "npm install".
 
-    2. Use "npm install --save bootstrap".
+    2. Use "ng serve" in the console to start a local server.
 
-    3. "npm install --save firebase @angular/fire"
+    3. Open up a web browser and navigate to localhost:4200
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     4. On line 30, in the "styles" array, check for "./node_modules/bootstrap/dist/css/bootstrap.min.css" If it's not there
      then add it WITH the quotes!
@@ -18,11 +19,8 @@ In order to get it working:
 =======
     4. "npm install --save font-awesome angular-font-awesome"
 >>>>>>> andrei-current-branch
+=======
+    4. The /admin route can be accessed by double clicking on the image in the header.
+>>>>>>> andrei-current-branch
 
-    5. Use "ng serve" in the console to start a local server.
-
-    6. Open up a web browser and navigate to localhost:4200
-
-    7. The /admin route can be accessed by double clicking on the image in the header.
-
-    8. To access the /messages route you can log in with the "email@mail.int" username and the "password" password.
+    5. To access the /messages route you can log in with the "email@mail.int" username and the "password" password.
