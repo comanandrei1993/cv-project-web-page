@@ -4,25 +4,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 In order to get it working: 
 
-    1. Navigate to the folder from a console, use "npm install".
+  1. Using the console, navigate to the folder where you cloned the project.
+  
+  2. Use "npm install".
+  
+  3. Depending on your PC/laptop's resources, wait either for a bit or until Valve releases Half-Life 3 
+  ( birth of the universe --> current times --> end of the universe --> release of Half-Life 3 )
+  
+  4. Use "ng serve" in the console to start a local server.
 
-    2. Use "npm install --save bootstrap".
-
-    3. "npm install --save firebase @angular/fire"
-
-<<<<<<< HEAD
-    4. On line 30, in the "styles" array, check for "./node_modules/bootstrap/dist/css/bootstrap.min.css" If it's not there
-     then add it WITH the quotes!
-    
-    4. Use "npm install @angular/fire firebase --save"
-=======
-    4. "npm install --save font-awesome angular-font-awesome"
->>>>>>> andrei-current-branch
-
-    5. Use "ng serve" in the console to start a local server.
-
-    6. Open up a web browser and navigate to localhost:4200
-
-    7. The /admin route can be accessed by double clicking on the image in the header.
-
-    8. To access the /messages route you can log in with the "email@mail.int" username and the "password" password.
+  5. Open up a browser and navigate to localhost:4200
+  
+  6. There's an /admin route that can be accessed by double clicking on the image in the header.
+  
+  7. To access the /messages route you can log in with the "email@mail.int" username and the "password" password from the admin component.
