@@ -9,7 +9,6 @@ import { PostMessageService } from 'src/app/services/post-message.service';
   styleUrls: ['./email-form.component.scss']
 })
 export class EmailFormComponent implements OnInit {
-  @ViewChild('myForm', { static: false }) myForm: NgForm;
 
   submited = false;
 
@@ -22,13 +21,12 @@ export class EmailFormComponent implements OnInit {
     this.submited = true;
 
     this.postMessageService.postMessage(
-      myForm.fullName,
-      myForm.subject,
-      myForm.email,
-      myForm.text
+      myForm.value.fullName,
+      myForm.value.subject,
+      myForm.value.email,
+      myForm.value.text
       );
 
-    this.myForm.reset();
   }
 
 }
