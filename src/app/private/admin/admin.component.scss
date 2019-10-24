@@ -1,4 +1,12 @@
+@import '../../global-styles/keyframes';
+
 .container {
   max-width: 40%;
   margin-top: 20px;
+}
+
+// ----- ANIMATIONS -----
+
+.log-in-container {
+  animation: from-bottom 0.7s ease-in backwards;
 }

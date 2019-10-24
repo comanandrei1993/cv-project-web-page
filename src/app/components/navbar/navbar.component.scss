@@ -52,3 +52,31 @@ ul {
 
   }
 }
+
+// KEYFRAME animations for menu links
+
+.link-1 {
+  animation: button-load 1200ms;
+}
+
+.link-2 {
+  animation: button-load 1600ms;
+}
+
+.link-3 {
+  animation: button-load 2000ms;
+}
+
+.welcome {
+  animation: button-load 1000ms;
+}
+
+@keyframes button-load {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

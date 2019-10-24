@@ -1,6 +1,6 @@
 <div class="container" *ngIf="submited === false">
   <form (ngSubmit)="onSubmit(myForm)" #myForm="ngForm">
-    <div class="form-group">
+    <div class="form-group fullname-div">
       <label for="full-name">Full Name</label>
       <input
         type="text"
@@ -13,7 +13,7 @@
       />
     </div>
 
-    <div class="form-group">
+    <div class="form-group subject-div">
       <label for="subject">Subject<span>*</span></label>
       <input
         type="text"
@@ -30,7 +30,7 @@
       >
     </div>
 
-    <div class="form-group">
+    <div class="form-group email-div">
       <label for="email">Email<span>*</span></label>
       <input
         name="email"
@@ -49,7 +49,7 @@
       >
     </div>
 
-    <div class="form-group">
+    <div class="form-group textarea-div">
       <label for="message">
         Message<span>*</span>
       </label>
@@ -70,7 +70,7 @@
 
     <button
       type="submit"
-      class="btn btn-primary"
+      class="btn btn-primary send-button"
       [disabled]="!myForm.valid">
       Send!
     </button>

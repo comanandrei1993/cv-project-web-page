@@ -1,4 +1,6 @@
 @import '../../global-styles/variables';
+@import'../../global-styles/keyframes';
+$formgroup-animation: 1.5s;
 
 button {
   margin-bottom: 20px;
@@ -55,4 +57,31 @@ textarea {
     max-width: 40%;
   }
 
+}
+
+// ----- ANIMATIONS -----
+
+// Form groups slide ins
+.fullname-div {
+  animation: from-left $formgroup-animation ease-in backwards;
+}
+
+.subject-div {
+  animation: from-right $formgroup-animation ease-in backwards;
+  animation-delay: 0.3s;
+}
+
+.email-div {
+  animation: from-left $formgroup-animation ease-in backwards;
+  animation-delay: 0.6s;
+}
+
+.textarea-div {
+  animation: from-right $formgroup-animation ease-in backwards;
+  animation-delay: 0.9s;
+}
+
+.send-button {
+  animation: from-bottom $formgroup-animation ease-in backwards;
+  animation-delay: 1.2s;
 }

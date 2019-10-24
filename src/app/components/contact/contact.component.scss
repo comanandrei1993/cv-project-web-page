@@ -1,6 +1,7 @@
 @import '../../global-styles/variables';
 @import '../../global-styles/link-styles';
 @import '../../mixins/selection-txt-selector.scss';
+@import '../../global-styles/keyframes';
 
 @include selection {
   color: $themeBlue1;
@@ -103,5 +104,59 @@ a:hover {
   .row {
     padding-left: 30%;
     padding-right: 30%;
+  }
+}
+
+// ----- Animations -----
+
+// Social media buttons
+.facebook-logo {
+  animation: from-left 2s ease-in;
+}
+
+.instagram-logo {
+  animation: from-bottom 2s ease-in backwards;
+  animation-delay: 0.125s;
+}
+
+.linkedin-logo {
+  animation: from-right 2s ease-in;
+}
+
+.phone, .email {
+  animation: rotate-90 2s;
+}
+
+// Card text
+
+.my-cards {
+  animation: change-color 1.5s backwards;
+  animation-delay: 1s;
+}
+
+@keyframes change-color {
+  0% {
+    color: $themeBlue1;
+  }
+  100% {
+    color: #ffffff;
+  }
+}
+
+// :after bottom border color
+.email {
+
+  a:after {
+    animation: my-border-color 1.5s backwards;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes my-border-color {
+  0% {
+    border-bottom: 1px solid $themeBlue1;
+  }
+  100% {
+    border-bottom: 1px solid #ffffff;
   }
 }

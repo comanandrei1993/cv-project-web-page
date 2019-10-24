@@ -1,6 +1,6 @@
 <div class="row" *ngIf="messages.length > 0 && !gettingMessages">
   <div class="col-sm-12" *ngFor="let message of messages">
-    <div class="blue-bar"><button (click)="onDeleteMessage(message.id)">X</button></div>
+    <div><button (click)="onDeleteMessage(message.id)">X</button></div>
     <h2>{{message.fullName}}</h2>
     <h3>{{message.email}}</h3>
     <hr />

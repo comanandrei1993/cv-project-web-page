@@ -1,4 +1,5 @@
 @import '../../global-styles/variables';
+@import '../../global-styles/keyframes';
 
 figcaption {
   color: #000000;
@@ -43,4 +44,18 @@ img {
     margin: 5px auto;
   }
 
+}
+
+// ----- ANIMATIONS -----
+
+.html-logo {
+  animation: from-left 1.2s ease-in;
+}
+
+.css-logo {
+  animation: from-right 1.2s ease-in;
+}
+
+.javascript-logo, .angular-logo {
+  animation: from-bottom 1.5s ease-in;
 }

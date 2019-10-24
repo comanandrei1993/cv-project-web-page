@@ -1,0 +1,39 @@
+// Used to load stuff from left side
+@keyframes from-left {
+    0% {
+      transform: translateX(-100vw);
+    }
+    100% {
+      transform: translateX(0vw);
+    }
+  }
+
+// Used to load stuff from right side
+@keyframes from-right {
+    0% {
+      transform: translateX(100vw);
+    }
+    100% {
+      transform: translateX(0vw);
+    }
+}
+
+// Used to load stuff from bottom
+@keyframes from-bottom {
+    0% {
+      transform: translateY(500px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+// Rotates element from 90deg to 0
+@keyframes rotate-90 {
+    0% {
+      transform: rotateY(-90deg);
+    }
+    100% {
+      transform: rotateY(0);
+    }
+  }

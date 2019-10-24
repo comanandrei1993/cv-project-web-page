@@ -1,6 +1,12 @@
 @import '../../global-styles/variables';
 @import '../../global-styles/link-styles';
 
+// ----- VARIABLES -----
+
+$textAnimation: 4s;
+
+// ///////////
+
 a {
   color: $themeBlue1;
 }
@@ -35,4 +41,58 @@ a:hover {
     padding-right: 30%;
   }
 
+}
+
+// ----- Animations -----
+
+// Left TEXT
+.left-text {
+  animation: text-from-left $textAnimation ease-out forwards;
+}
+
+@keyframes text-from-left {
+  0% {
+    transform: translateX(-100vw);
+  }
+  50% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+// @keyframes from-left {
+//   from {
+//     transform: translateX(-100vw);
+//   }
+//   to {
+//     transform: translateX(0);
+//   }
+// }
+
+// RIGHT TEXT
+.right-text {
+  animation: text-from-right $textAnimation ease-out forwards;
+}
+
+// @keyframes from-right {
+//   from {
+//     transform: translateX(100vw);
+//   }
+//   to {
+//     transform: translateX(0);
+//   }
+// }
+
+@keyframes text-from-right {
+  0% {
+    transform: translateX(100vw);
+  }
+  50% {
+    transform: translateX(0vw);
+  }
+  100% {
+    transform: translateY(50px);
+  }
 }
