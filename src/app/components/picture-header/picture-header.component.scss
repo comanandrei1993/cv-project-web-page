@@ -39,17 +39,6 @@ img:hover {
 // ----- ANIMATIONS -----
 
 img {
-  animation: rotate-90 1.25s ease-in;
+  animation: rotate-90 1.25s ease-in backwards;
+  animation-delay: 4s;
 }
-
-// @keyframes image-load {
-//   0% {
-//     transform: translateX(-70vw) rotate(-180deg);
-//   }
-//   50% {
-//     transform: tanslateX(-35vw) rotate(-90deg);
-//   }
-//   100% {
-//     transform: translateX(0) rotate(0);
-//   }
-// }

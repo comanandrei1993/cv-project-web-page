@@ -32,7 +32,7 @@ a {
 }
 
 a:hover {
-  color: $themeGray1;
+  color: $complementBlue1;
 }
 
 .card {
@@ -55,7 +55,7 @@ a:hover {
   }
 
   a:hover:after {
-    border-bottom: 1px solid $themeGray1;
+    border-bottom: 1px solid $complementBlue1;
   }
 }
 

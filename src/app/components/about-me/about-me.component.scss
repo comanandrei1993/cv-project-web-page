@@ -3,7 +3,7 @@
 
 // ----- VARIABLES -----
 
-$textAnimation: 4s;
+$textAnimationDuration: 4s;
 
 // ///////////
 
@@ -47,7 +47,7 @@ a:hover {
 
 // Left TEXT
 .left-text {
-  animation: text-from-left $textAnimation ease-out forwards;
+  animation: text-from-left $textAnimationDuration ease-out forwards;
 }
 
 @keyframes text-from-left {
@@ -62,28 +62,10 @@ a:hover {
   }
 }
 
-// @keyframes from-left {
-//   from {
-//     transform: translateX(-100vw);
-//   }
-//   to {
-//     transform: translateX(0);
-//   }
-// }
-
 // RIGHT TEXT
 .right-text {
-  animation: text-from-right $textAnimation ease-out forwards;
+  animation: text-from-right $textAnimationDuration ease-out forwards;
 }
-
-// @keyframes from-right {
-//   from {
-//     transform: translateX(100vw);
-//   }
-//   to {
-//     transform: translateX(0);
-//   }
-// }
 
 @keyframes text-from-right {
   0% {

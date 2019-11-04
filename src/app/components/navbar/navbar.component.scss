@@ -13,7 +13,7 @@ ul {
   }
 
   a:hover {
-    color: $themeGray1;
+    color: $complementBlue1;
   }
 
   a:after {
@@ -28,7 +28,7 @@ ul {
   a:hover:after {
     width: 100%;
     color: $themeGray1;
-    border-bottom: 1.5px solid $themeGray1;
+    border-bottom: 1.5px solid $complementBlue1;
   }
 
 }

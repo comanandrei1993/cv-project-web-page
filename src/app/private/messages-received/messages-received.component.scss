@@ -1,4 +1,5 @@
 @import '../../global-styles/variables';
+@import '../../global-styles/keyframes';
 
 button {
   margin-left: 94%;
@@ -56,4 +57,10 @@ div.col-sm-12 {
     padding-left: 30%;
     padding-right: 30%;
   }
+}
+
+// ----- ANIMATIONS -----
+
+.message-div {
+  animation: from-left 1.2s ease-in;
 }
